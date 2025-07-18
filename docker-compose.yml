@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  monitor-ativos-b3:
+    image: monitor-ativos-b3:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    volumes:
+      - ./appsettings.json:/app/appsettings.json:ro
+    command: ["PETR4", "40", "20"] # Exemplo de argumentos: <TICKER> <PRECO_VENDA> <PRECO_COMPRA>

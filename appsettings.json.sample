@@ -1,0 +1,25 @@
+{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "System": "Warning",
+            "Microsoft": "Warning"
+        }
+    },
+    "BraveApi": {
+        "BaseUrl": "https://brapi.dev/api",
+        "Token": "<SEU_TOKEN_AQUI>"
+    },
+    "Email": {
+        "Server": "live.smtp.mailtrap.io",
+        "Port": 587,
+        "Username": "smtp@mailtrap.io",
+        "Password": "<SEU_TOKEN_AQUI>",
+        "EnableSsl": true,
+        "EmailRemetente": "hello@demomailtrap.co",
+        "EmailDestinatario": "<SEU_EMAIL_AQUI>"
+    },
+    "Monitoramento": {
+        "FrequenciaMonitoramentoPrecosMinutos": 5
+    }
+}
