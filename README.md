@@ -1,5 +1,7 @@
 # Monitor Ativos B3
 
+![.NET CI](https://github.com/gav1ao/monitor-ativos-b3/actions/workflows/dotnet.yml/badge.svg)
+
 <div align="center">
     <img src="https://img.shields.io/badge/C%23-12.0-blue" alt="C# Version">
     <img src="https://img.shields.io/badge/.NET-8.0-blueviolet" alt=".NET Version">
