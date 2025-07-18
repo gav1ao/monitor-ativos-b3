@@ -1,0 +1,29 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# .github/workflows/ci.yml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Run tests
+        run: dotnet test
+      - name: Build and publish
+        run: dotnet publish MonitorAtivosB3/MonitorAtivosB3.csproj -c Release -o out
+      - name: Build Docker image
+        run: docker build -t monitor-ativos-b3 .
